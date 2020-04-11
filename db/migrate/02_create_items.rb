@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :category
       t.string :img
-      t.integer :value
+      t.has_one :user, foreign_key: true
 
       t.timestamps
     end

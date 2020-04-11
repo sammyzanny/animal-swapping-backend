@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2020_03_25_215946) do
     t.string "category"
     t.string "img"
     t.integer "value"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "sales", force: :cascade do |t|
@@ -52,6 +54,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_215946) do
     t.index ["user_id"], name: "index_wishes_on_user_id"
   end
 
+  add_foreign_key "items", "users"
   add_foreign_key "sales", "items"
   add_foreign_key "sales", "users"
   add_foreign_key "wishes", "items"

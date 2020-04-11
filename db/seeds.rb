@@ -35,8 +35,10 @@ fossils2 = JSON.parse(File.read('./data/animal_crossing_fossils2.json'))
  wallpaper = JSON.parse(File.read('./data/animal_crossing_wallpaper_items.json'))
  generic_wallpaper = JSON.parse(File.read('./data/animal_crossing_wallpaper_names.json'))
 
-
+Wish.destroy_all
+Sale.destroy_all
 Item.destroy_all
+
 
 bugs.each do |k,v|
      Item.create(name: k, img: v, category: "Bugs")
@@ -155,7 +157,7 @@ generic_houseware.each do |v|
 end
 
 generic_materials.each do |v|
-    Item.create(name: v, img: generics["Tools"], category: "Materials")
+    Item.create(name: v, img: generics["Materials"], category: "Materials")
 end
 
 generic_miscellaneous.each do |v|
@@ -167,7 +169,7 @@ generic_rug.each do |v|
 end
 
 generic_wallmounted.each do |v|
-    Item.create(name: v, img: generics["Furniture"], category: "Wallmounted")
+    Item.create(name: v, img: generics["Furniture"], category: "Wall-Mounted")
 end
 
 generic_wallpaper.each do |v|
