@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :create, :destroy]
   resources :sales, only: [:create, :destroy]
   resources :wishes, only: [:create, :destroy]
+  resources :requests, only: [:create, :update]
 
   get '/login', to: 'users#profile'
   get '/user/:username', to: 'users#visit'

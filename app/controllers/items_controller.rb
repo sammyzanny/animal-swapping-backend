@@ -21,6 +21,7 @@ class ItemsController < ApplicationController
     item = Item.find_by(id: params[:id].to_i)
     if item.user_id == current_user.id
       item.sales.destroy_all
+      item.wishes.destory_all
       item.destroy
       render json: item
     else 

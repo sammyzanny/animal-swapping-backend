@@ -5,6 +5,17 @@ class UsersController < ApplicationController
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
 
+  def edit
+    user = current_user
+    user.update_attributes(user_params)
+    if user.valid?
+      render json: user
+    else 
+      render json: {error: "Profile update did not go through"}
+    end
+  
+  end
+
   def visit
     user = User.find_by(username: params[:username])
     if user 
