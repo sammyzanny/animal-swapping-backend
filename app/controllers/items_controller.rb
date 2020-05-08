@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
  def create
     user = current_user
     item = Item.new(name: params[:item][:name])
-    item.img = "https://vignette.wikia.nocookie.net/animalcrossing/images/3/34/Nhlloid.png/revision/latest?cb=20200222181723"
+    item.img = "https://i.ibb.co/fFxHGp4/gear.png"
     item.category = "Custom " + params[:item][:category]
     item.user_id = user.id
     item.save
@@ -21,7 +21,8 @@ class ItemsController < ApplicationController
     item = Item.find_by(id: params[:id].to_i)
     if item.user_id == current_user.id
       item.sales.destroy_all
-      item.wishes.destory_all
+      item.wishes.destroy_all
+      item.requests.destroy_all
       item.destroy
       render json: item
     else 

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
 
-  def edit
+  def update
     user = current_user
     user.update_attributes(user_params)
     if user.valid?

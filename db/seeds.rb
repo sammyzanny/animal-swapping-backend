@@ -1,7 +1,3 @@
-bugs = JSON.parse(File.read('./data/animal_crossing_bugs.json'))
-fish = JSON.parse(File.read('./data/animal_crossing_fish.json'))
-fossils1 = JSON.parse(File.read('./data/animal_crossing_fossils.json'))
-fossils2 = JSON.parse(File.read('./data/animal_crossing_fossils2.json'))
  accessories = JSON.parse(File.read('./data/animal_crossing_clothing_accessories_items.json'))
  generic_accessories = JSON.parse(File.read('./data/animal_crossing_clothing_accessories_names.json'))
  bags = JSON.parse(File.read('./data/animal_crossing_clothing_bags_items.json'))
@@ -40,17 +36,7 @@ Sale.destroy_all
 Item.destroy_all
 
 
-bugs.each do |k,v|
-     Item.create(name: k, img: v, category: "Bugs")
-end
 
-fish.each do |k,v|
-    Item.create(name: k, img: v, category: "Fish")
-end
-
-(fossils1.merge(fossils2)).each do |k,v|
-    Item.create(name: k, img: v, category: "Fossils")
-end
 
 accessories.each do |k,v|
     Item.create(name: k, img: v, category: "Clothing Accessories")

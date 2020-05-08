@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :customs
-  resources :users, only: [:create, :index]
+  resources :users, only: [:create, :index, :update]
   resources :auth, only: [:create]
   resources :items, only: [:index, :create, :destroy]
   resources :sales, only: [:create, :destroy]
