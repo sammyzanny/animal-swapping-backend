@@ -1,24 +1,42 @@
-# README
+# Animal Swapping
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Quick Links**
 
-Things you may want to cover:
+Frontend repo: https://github.com/sammyzanny/animal-swapping-frontend
 
-* Ruby version
+Demo: https://www.youtube.com/watch?v=Gc27jCrZiR4&feature=youtu.be
 
-* System dependencies
+***
+Animal Swapping is designed to be a community trading platform for Animal Crossing New Horizons.
+***
+***
+### Prerequisites
+Before you continue, ensure you have met the following requirements:
+- Ruby version 2.6.1 or later
+- Rails version 6.0.2 or later
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+### Built With
+- React
+- Redux
+- Ruby
+- Rails API utilizing Active Model Serializers
+- PostgreSQL Database using ActiveRecord
 
-* How to run the test suite
+### Server-Side Install Instructions
+1. Run `bundle install`
+2. Run `rake db:create`
+3. Run `rake db:migrate`
+4. Run `rake db:seed`
+5. Run `rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
+### Client-Side Install Instructions
+1. Run `npm install`
+2. Run `npm start`
 
-* Deployment instructions
+### The App
+Detailed instructions will display on the home page as soon as the app is launched. Animal Swapping is designed to pair up players of Animal Crossing for optimal trading. Users indicate which items they are willing to trade and which they would like to trade for, then searches are filtered accordingly.
 
-* ...
+### Author
+Sam Zandi
