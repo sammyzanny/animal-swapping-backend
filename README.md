@@ -1,4 +1,5 @@
 # Animal Swapping
+![Demo](https://github.com/sammyzanny/animal-swapping-backend/blob/master/Screen%20Recording%202020-05-29%20at%203.41.35%20AM.gif?raw=true)
 
 **Quick Links**
 
