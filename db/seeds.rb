@@ -31,6 +31,7 @@
  wallpaper = JSON.parse(File.read('./data/animal_crossing_wallpaper_items.json'))
  generic_wallpaper = JSON.parse(File.read('./data/animal_crossing_wallpaper_names.json'))
 
+Request.destroy_all
 Wish.destroy_all
 Sale.destroy_all
 Item.destroy_all
