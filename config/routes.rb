@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :sales, only: [:create, :destroy]
   resources :wishes, only: [:create, :destroy]
   resources :requests, only: [:create, :update]
-
+  
+  root 'welcome#index'
   get '/login', to: 'users#profile'
   get '/user/:username', to: 'users#visit'
   get '/users/with/:item_name', to: 'users#item_search'
